@@ -19,6 +19,10 @@ AMyCharacter::AMyCharacter()
 void AMyCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+	check(GEngine != nullptr);
+	//Display Debug message for 5 seconds
+	// "-1" Key prevents the message from being updated or refreshed
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Cyan, TEXT("This is the First Person Character!"));
 	
 }
 
